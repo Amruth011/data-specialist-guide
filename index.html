@@ -65,22 +65,21 @@
             opacity: 1;
             transform: translate(-50%, 0);
         }
-        .watermark {
-            position: fixed;
-            bottom: 10px;
-            right: 15px;
-            text-align: right;
-            font-size: 12px;
-            color: #9ca3af;
-            opacity: 0.7;
-            pointer-events: none;
-            z-index: 9999;
+        .portfolio-link-btn {
+            background-color: #fff;
+            color: #4f46e5;
+            transition: all 0.3s ease;
+        }
+        .portfolio-link-btn:hover {
+            background-color: #eef2ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
     </style>
 </head>
 <body class="antialiased text-slate-800">
 
-    <div id="capture-area" class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 pb-24 bg-f3f4f6">
+    <div id="capture-area" class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 pb-12 bg-f3f4f6">
         <!-- Header -->
         <header class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Your Journey to a Data Specialist</h1>
@@ -117,10 +116,13 @@
                     <!-- Excel -->
                     <details class="bg-slate-50 p-4 rounded-lg cursor-pointer group">
                         <summary class="font-semibold text-lg flex justify-between items-center">
-                            1. Excel: The Data Toolkit
-                            <span class="arrow transition-transform duration-300 transform group-open:rotate-90">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
-                            </span>
+                            <span>1. Excel: The Data Toolkit</span>
+                            <div class="flex items-center">
+                                <span class="text-sm text-slate-400 mr-3">Click for more</span>
+                                <span class="arrow transition-transform duration-300 transform group-open:rotate-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                                </span>
+                            </div>
                         </summary>
                         <div class="mt-4 pl-4 border-l-2 border-indigo-200 text-slate-600 space-y-3">
                             <p><strong>Basic:</strong> Navigation, Data Entry, Basic Formulas.</p>
@@ -130,7 +132,15 @@
                     </details>
                     <!-- SQL -->
                     <details class="bg-slate-50 p-4 rounded-lg cursor-pointer group">
-                         <summary class="font-semibold text-lg flex justify-between items-center">2. SQL: The Language of Databases<span class="arrow transition-transform duration-300 transform group-open:rotate-90"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span></summary>
+                         <summary class="font-semibold text-lg flex justify-between items-center">
+                            <span>2. SQL: The Language of Databases</span>
+                            <div class="flex items-center">
+                                <span class="text-sm text-slate-400 mr-3">Click for more</span>
+                                <span class="arrow transition-transform duration-300 transform group-open:rotate-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                                </span>
+                            </div>
+                        </summary>
                          <div class="mt-4 pl-4 border-l-2 border-indigo-200 text-slate-600 space-y-3">
                            <p><strong>Basic:</strong> SELECT, WHERE, ORDER BY, Aggregate Functions.</p>
                            <p><strong>Intermediate:</strong> JOINs, Subqueries, GROUP BY, HAVING.</p>
@@ -139,7 +149,15 @@
                     </details>
                     <!-- BI Tools -->
                     <details class="bg-slate-50 p-4 rounded-lg cursor-pointer group">
-                        <summary class="font-semibold text-lg flex justify-between items-center">3. BI Tools: Telling Data Stories<span class="arrow transition-transform duration-300 transform group-open:rotate-90"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span></summary>
+                        <summary class="font-semibold text-lg flex justify-between items-center">
+                            <span>3. BI Tools: Telling Data Stories</span>
+                            <div class="flex items-center">
+                                <span class="text-sm text-slate-400 mr-3">Click for more</span>
+                                <span class="arrow transition-transform duration-300 transform group-open:rotate-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                                </span>
+                            </div>
+                        </summary>
                         <div class="mt-4 pl-4 border-l-2 border-indigo-200 text-slate-600 space-y-3">
                            <p><strong>Key Skills:</strong> Data Modeling, Chart Selection, UX/UI.</p>
                            <p><strong>Popular Tools:</strong> Tableau, Power BI.</p>
@@ -147,7 +165,15 @@
                     </details>
                     <!-- Statistics -->
                     <details class="bg-slate-50 p-4 rounded-lg cursor-pointer group">
-                        <summary class="font-semibold text-lg flex justify-between items-center">4. Statistics: The Foundation of Insight<span class="arrow transition-transform duration-300 transform group-open:rotate-90"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span></summary>
+                        <summary class="font-semibold text-lg flex justify-between items-center">
+                            <span>4. Statistics: The Foundation of Insight</span>
+                            <div class="flex items-center">
+                                <span class="text-sm text-slate-400 mr-3">Click for more</span>
+                                <span class="arrow transition-transform duration-300 transform group-open:rotate-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                                </span>
+                            </div>
+                        </summary>
                         <div class="mt-4 pl-4 border-l-2 border-indigo-200 text-slate-600 space-y-3">
                            <p><strong>Descriptive Statistics:</strong> Mean, Median, Mode, Variance.</p>
                            <p><strong>Inferential Statistics:</strong> Hypothesis Testing, Regression.</p>
@@ -155,7 +181,15 @@
                     </details>
                     <!-- Python -->
                     <details class="bg-slate-50 p-4 rounded-lg cursor-pointer group">
-                        <summary class="font-semibold text-lg flex justify-between items-center">5. Python/R: For Advanced Analytics<span class="arrow transition-transform duration-300 transform group-open:rotate-90"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span></summary>
+                        <summary class="font-semibold text-lg flex justify-between items-center">
+                            <span>5. Python/R: For Advanced Analytics</span>
+                            <div class="flex items-center">
+                                <span class="text-sm text-slate-400 mr-3">Click for more</span>
+                                <span class="arrow transition-transform duration-300 transform group-open:rotate-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                                </span>
+                            </div>
+                        </summary>
                         <div class="mt-4 pl-4 border-l-2 border-indigo-200 text-slate-600 space-y-3">
                            <p><strong>Libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn.</p>
                            <p><strong>Advanced:</strong> EDA, Time Series, Intro to ML.</p>
@@ -192,13 +226,20 @@
                 <p class="opacity-90 max-w-2xl mx-auto">I hope this guide is a valuable resource on your journey. Feel free to download it for offline use or share it with others. Bookmark this page to visit again for future updates!</p>
             </div>
         </div>
+        
+        <!-- Portfolio Link Section -->
+        <footer class="text-center mt-12">
+            <p class="text-slate-600 mb-4">Created by Amruth Kumar M</p>
+            <a href="https://amruthportfolio.me" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn font-bold py-3 px-6 rounded-full text-md shadow-md inline-flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Connect with me
+            </a>
+        </footer>
     </div>
     
     <div id="toast"></div>
-    <div class="watermark">
-        Amruth Kumar M <br>
-        An Artificial Intelligence & Data Science Student
-    </div>
 
     <script>
         // --- Toast Notification ---
