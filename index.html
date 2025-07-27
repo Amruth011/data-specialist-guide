@@ -110,6 +110,11 @@
         details[open] .arrow {
             transform: rotate(90deg);
         }
+        .skill-tag {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #9ca3af;
+        }
         #toast {
             position: fixed;
             bottom: 20px;
@@ -160,14 +165,20 @@
                     <div class="space-y-4">
                         <!-- Skill Details -->
                         <details class="rounded-lg group">
-                            <summary class="p-4 font-semibold text-lg flex justify-between items-center cursor-pointer">
-                                <span>1. Excel: The Data Toolkit</span>
-                                <div class="flex items-center">
-                                    <span class="text-sm text-slate-500 mr-3 opacity-0 group-hover:opacity-100 transition-opacity">Click for more</span>
-                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                            <summary class="p-4 flex justify-between items-center cursor-pointer">
+                                <span class="font-semibold text-lg">1. Excel: The Data Toolkit</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="hidden md:flex items-center space-x-2">
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Pivot Tables</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">VLOOKUP</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Dashboards</span>
+                                    </div>
+                                    <div class="flex items-center p-1 rounded-md bg-white/5 border border-white/10">
+                                        <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                                    </div>
                                 </div>
                             </summary>
-                            <div class="p-6 pt-2 border-t border-slate-700 text-slate-400 space-y-3">
+                            <div class="p-6 pt-4 border-t border-slate-700 text-slate-400 space-y-3">
                                 <p><strong>Basic:</strong> Navigation, Data Entry, Basic Formulas.</p>
                                 <p><strong>Intermediate:</strong> Data Cleaning, Conditional Formatting, LOOKUPs.</p>
                                 <p><strong>Advanced:</strong> Pivot Tables, Data Visualization, Array Formulas.</p>
@@ -175,54 +186,77 @@
                         </details>
                         <!-- Repeat for other skills -->
                         <details class="rounded-lg group">
-                            <summary class="p-4 font-semibold text-lg flex justify-between items-center cursor-pointer">
-                                <span>2. SQL: The Language of Databases</span>
-                                <div class="flex items-center">
-                                    <span class="text-sm text-slate-500 mr-3 opacity-0 group-hover:opacity-100 transition-opacity">Click for more</span>
-                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                            <summary class="p-4 flex justify-between items-center cursor-pointer">
+                                <span class="font-semibold text-lg">2. SQL: The Language of Databases</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="hidden md:flex items-center space-x-2">
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Joins</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Queries</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Aggregation</span>
+                                    </div>
+                                    <div class="flex items-center p-1 rounded-md bg-white/5 border border-white/10">
+                                        <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                                    </div>
                                 </div>
                             </summary>
-                            <div class="p-6 pt-2 border-t border-slate-700 text-slate-400 space-y-3">
+                            <div class="p-6 pt-4 border-t border-slate-700 text-slate-400 space-y-3">
                                 <p><strong>Basic:</strong> SELECT, WHERE, ORDER BY, Aggregate Functions.</p>
                                 <p><strong>Intermediate:</strong> JOINs, Subqueries, GROUP BY, HAVING.</p>
                                 <p><strong>Advanced:</strong> Window Functions, Set Operations, CASE Statements.</p>
                             </div>
                         </details>
-                         <details class="rounded-lg group">
-                            <summary class="p-4 font-semibold text-lg flex justify-between items-center cursor-pointer">
-                                <span>3. BI Tools: Telling Data Stories</span>
-                                <div class="flex items-center">
-                                    <span class="text-sm text-slate-500 mr-3 opacity-0 group-hover:opacity-100 transition-opacity">Click for more</span>
-                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                        <details class="rounded-lg group">
+                            <summary class="p-4 flex justify-between items-center cursor-pointer">
+                                <span class="font-semibold text-lg">3. BI Tools: Telling Data Stories</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="hidden md:flex items-center space-x-2">
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Tableau</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Power BI</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">UX/UI</span>
+                                    </div>
+                                    <div class="flex items-center p-1 rounded-md bg-white/5 border border-white/10">
+                                        <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                                    </div>
                                 </div>
                             </summary>
-                            <div class="p-6 pt-2 border-t border-slate-700 text-slate-400 space-y-3">
+                            <div class="p-6 pt-4 border-t border-slate-700 text-slate-400 space-y-3">
                                <p><strong>Key Skills:</strong> Data Modeling, Chart Selection, UX/UI.</p>
                                <p><strong>Popular Tools:</strong> Tableau, Power BI.</p>
                             </div>
                         </details>
                         <details class="rounded-lg group">
-                            <summary class="p-4 font-semibold text-lg flex justify-between items-center cursor-pointer">
-                                <span>4. Statistics: The Foundation of Insight</span>
-                                <div class="flex items-center">
-                                    <span class="text-sm text-slate-500 mr-3 opacity-0 group-hover:opacity-100 transition-opacity">Click for more</span>
-                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                            <summary class="p-4 flex justify-between items-center cursor-pointer">
+                                <span class="font-semibold text-lg">4. Statistics: The Foundation of Insight</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="hidden md:flex items-center space-x-2">
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Hypothesis Testing</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Regression</span>
+                                    </div>
+                                    <div class="flex items-center p-1 rounded-md bg-white/5 border border-white/10">
+                                        <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                                    </div>
                                 </div>
                             </summary>
-                            <div class="p-6 pt-2 border-t border-slate-700 text-slate-400 space-y-3">
+                            <div class="p-6 pt-4 border-t border-slate-700 text-slate-400 space-y-3">
                                <p><strong>Descriptive Statistics:</strong> Mean, Median, Mode, Variance.</p>
                                <p><strong>Inferential Statistics:</strong> Hypothesis Testing, Regression.</p>
                             </div>
                         </details>
                         <details class="rounded-lg group">
-                            <summary class="p-4 font-semibold text-lg flex justify-between items-center cursor-pointer">
-                                <span>5. Python/R: For Advanced Analytics</span>
-                                <div class="flex items-center">
-                                    <span class="text-sm text-slate-500 mr-3 opacity-0 group-hover:opacity-100 transition-opacity">Click for more</span>
-                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                            <summary class="p-4 flex justify-between items-center cursor-pointer">
+                                <span class="font-semibold text-lg">5. Python/R: For Advanced Analytics</span>
+                                <div class="flex items-center space-x-4">
+                                    <div class="hidden md:flex items-center space-x-2">
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">Pandas</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">NumPy</span>
+                                        <span class="skill-tag text-xs font-medium px-2 py-1 rounded-md">EDA</span>
+                                    </div>
+                                    <div class="flex items-center p-1 rounded-md bg-white/5 border border-white/10">
+                                        <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg></span>
+                                    </div>
                                 </div>
                             </summary>
-                            <div class="p-6 pt-2 border-t border-slate-700 text-slate-400 space-y-3">
+                            <div class="p-6 pt-4 border-t border-slate-700 text-slate-400 space-y-3">
                                <p><strong>Libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn.</p>
                                <p><strong>Advanced:</strong> EDA, Time Series, Intro to ML.</p>
                             </div>
